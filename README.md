@@ -6,18 +6,18 @@ This repository contains the NavStik Drivers and Base Code. This is intended to 
 NavStik base-code makes use of ChibiOS RTOS, which offers very good support for the  STM32 platform. If not already familiar, users would find it useful to refer to the ChibiOS documentation to understand the RTOS concepts for efficient deployment of their applications.
 
 Key configuration files with NavStik specific settings are:
-./boards/navstik/board.h   : All I/Os (pins on STM32) are configured here.
-./src/das_conf.h           : Data-Acquisition-System (sensors and communication-ports) settings are stored in this file. High level drivers can be enabled/disabled here.
-./src/das.c                : Initialization code for each sub-system of DAS
-./src/halconf.h            : Enable/disable the basic drivers for various protocols.
-./src/mcuconf.h            : Settings for the basic drivers.
 
-./src/IO                   : Folder with I/O related drivers.
-./src/sensors              : Drivers for sensors available on NavStik
+- **./boards/navstik/board.h**   : All I/Os (pins on STM32) are configured here.
+- **./src/das_conf.h**           : Data-Acquisition-System (sensors and communication-ports) settings are stored in this file. High level drivers can be enabled/disabled here.
+- **./src/das.c**                : Initialization code for each sub-system of DAS.
+- **./src/halconf.h**            : Enable/disable the basic drivers for various protocols.
+- **./src/mcuconf.h**            : Settings for the basic drivers.
+- **./src/IO**                   : Folder with I/O related drivers.
+- **./src/sensors**              : Folder with drivers for sensors available on NavStik.
 
 A console application is bundled with this base-code as a sample. It allows the users to quickly test all the sensors and interfaces from the command prompt (over Debug-Cable connected to IvyGS). This is described in more details in the "getting stated" section in documentation, available at www.navstik.org.
 
-This is a work in progress. We plan to keep adding support for more features, thereby making it even easier for users to develop powerful applications.
+This is a work in progress. We plan to keep adding support for more features, thereby making it even easier for users to develop powerful applications using NavStik.
 
 
 THIS SOFTWARE IS PROVIDED BY NAVSTIK ''AS IS'' AND ANY
