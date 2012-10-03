@@ -15,6 +15,8 @@ Key configuration files with NavStik specific settings are:
 - **./src/IO**                   : Folder with I/O related drivers.
 - **./src/sensors**              : Folder with drivers for sensors available on NavStik.
 
+**./IvyGS.cfg** : This is the configuration file for IvyGS (Debug/Ground-Station board from NavStik) to use with OpenOCD JTAG debugger.
+
 A console application is bundled with this base-code as a sample. It allows the users to quickly test all the sensors and interfaces from the command prompt (over Debug-Cable connected to IvyGS). This is described in more details in the "getting stated" section in documentation, available at www.navstik.org.
 
 This is a work in progress. We plan to keep adding support for more features, thereby making it even easier for users to develop powerful applications using NavStik.
