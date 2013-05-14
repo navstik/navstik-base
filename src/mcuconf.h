@@ -184,7 +184,7 @@
  * SERIAL driver system settings.
  */
 #define STM32_SERIAL_USE_USART1             TRUE
-#define STM32_SERIAL_USE_USART2             TRUE    // nitin: Used for GPS (default baud: 38400)
+#define STM32_SERIAL_USE_USART2             TRUE    // nitin: Used for GPS (default baud: 38400. Set to 9600 in das.c)
 #define STM32_SERIAL_USE_USART3             FALSE
 #define STM32_SERIAL_USE_UART4              FALSE
 #define STM32_SERIAL_USE_UART5              TRUE

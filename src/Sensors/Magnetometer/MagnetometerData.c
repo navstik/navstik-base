@@ -8,6 +8,12 @@
 #include<math.h>
 
 #include "das.h"
+#if DAS_USE_ZIGBEE
+/* Serial Driver for Output. */
+#define OUTPUT          SD5
+#else
+#define OUTPUT          SD1
+#endif /* DAS_USE_ZIGBEE*/
 
 #if DAS_USE_MAGNETOMETER
 /*The raw values are stored in val. To convert to microTesla,
@@ -37,6 +43,17 @@ void readMagnetometerData(MagData *magd) {
   magd->MAG_X = magd->RAW_MAG_X * magd->RANGE ;
   magd->MAG_Y = magd->RAW_MAG_Y * magd->RANGE ;
   magd->MAG_Z = magd->RAW_MAG_Z * magd->RANGE ;
+
+  chThdSleepMicroseconds(50) ;
+  
+//  hmc_txbuf[0] = ID_A ;
+//  i2cAcquireBus(&I2C_HMC) ;
+//  i2cMasterTransmit(&I2C_HMC, HMC_ADDR, hmc_txbuf, 1, hmc_rxbuf, 3) ;
+//  i2cReleaseBus(&I2C_HMC) ;
+
+//  chprintf((BaseSequentialStream *)&OUTPUT, "\r\nRegister A... %d, %d, %d\r\n",hmc_rxbuf[0], hmc_rxbuf[1], hmc_rxbuf[2]) ;
+  
+
 }
 
 #if DAS_USE_IMU

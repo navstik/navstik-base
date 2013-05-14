@@ -24,9 +24,9 @@
 #define OUT_Y_MSB  0x07      /* Read Only */
 #define OUT_Y_LSB  0x08      /* Read Only */
 #define STATUS_MAG 0x09      /* Read Only. Indicates device status. Alternatively DRDY Pin can be used */
-#define ID_A       0x10      /* Read Only. ASCII value H */
-#define ID_B       0x11      /* Read Only. ASCII value 4 */
-#define ID_C       0x12      /* Read Only. ASCII value 3 */
+#define ID_A       0x0A      /* Read Only. ASCII value H */
+#define ID_B       0x0B      /* Read Only. ASCII value 4 */
+#define ID_C       0x0C      /* Read Only. ASCII value 3 */
 
 #define HMC_DRDY_PORT  GPIOC
 #define HMC_DRDY_PIN   14
